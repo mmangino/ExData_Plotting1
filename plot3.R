@@ -1,0 +1,7 @@
+source("./loaddata.R")
+png("plot3.png")
+plot(times,limited[,"Sub_metering_1"], type="l", xlab="",ylab="Energy sub metering")
+lines(times,limited[,"Sub_metering_2"],col="red")
+lines(times,limited[,"Sub_metering_3"], col="blue")
+legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col=c("black","red","blue"),lty=1)
+dev.off()
